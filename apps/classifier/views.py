@@ -3,10 +3,7 @@ from .forms import imageDogForm
 from fastbook import *
 from fastai.vision.all import *
 from base64 import b64encode
-import pathlib
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 BASE_DIR = Path(__file__).resolve().parent.parent
 filepath = os.path.join(BASE_DIR, 'classifier/model.pkl')
 model = load_learner(filepath)
